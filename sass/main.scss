@@ -48,8 +48,8 @@ a{
 
 section{
     width: 320px;
-    padding-left: 22px;
-    padding-right: 22px;
+    // padding-left: 22px;
+    // padding-right: 22px;
     margin: auto;
 }
 
@@ -67,6 +67,8 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-top: 336px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .hero-slogan{
@@ -77,7 +79,8 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-top: 14px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .hero-text{
@@ -127,6 +130,7 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-left: 20px;
 }
 
 .title-why{
@@ -138,6 +142,8 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     width: 255px;
+    padding-left: 20px;
+        padding-right: 20px;
 
 }
 
@@ -149,6 +155,8 @@ section{
     letter-spacing: 0.03em;
     margin-top: 28px;
     width: 255px;
+    padding-left: 20px;
+        padding-right: 20px;
 }
 
 .hero-text-main{
@@ -159,6 +167,8 @@ section{
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.03em;
+    padding-left: 20px;
+        padding-right: 20px;
 }
 
 .hero-benefits-list{
@@ -351,8 +361,8 @@ section{
     width: 275px;
     height: 193px;
     border: 2px solid #1A2B70;
-        border-radius: 20px;
-        position: relative;
+    border-radius: 20px;
+    position: relative;
 
         &:not(:first-child){
             margin-top: 50px;
@@ -393,4 +403,250 @@ section{
     left: 50%;
     transform: translate(-50%, -50%);
     // transform: translateY(-50%);
+}
+
+.complex-image{
+    width: 76px;
+    max-height: 172px;
+    margin-right: 19px;
+}
+
+.complex-item-content{
+    display: flex;
+    align-items: center;
+    padding-left: 33px;
+    padding-top: 11px;
+}
+
+.complex-item-title{
+    @extend .catalog-list-item-text;
+    padding: 0;
+    margin-bottom: 7px;
+}
+
+.complex-item-link{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+}
+
+.explanation{
+    margin-top: 61px;
+    position: relative;
+    padding-top: 102px;
+}
+
+.explanation-expert-name{
+    position: absolute;
+    top: 0;
+    right: 21px
+}
+
+.explanation-name{
+    @extend .complex-title;
+    text-align: left;
+    margin: 0;
+    width: 150px;
+    padding: 0;
+}
+
+.explanation-job-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+.explanation-dots{
+    position: absolute;
+    font-weight: 200;
+    font-size: 200px;
+    line-height: 150px;
+    top: 0;
+    left: 0;
+}
+
+.explanation-main-text{
+    @extend .catalog-list-item-text-main;
+    width: 275px;
+}
+
+.reviews{
+    margin-top: 44px;
+}
+
+.reviews-title{
+    @extend .catalog-title;
+    margin: auto;
+    width: 277px;
+    text-align: center;
+}
+
+.reviews-wrap{
+    position: relative;
+    width: 275px;
+    background-color: #1A2B70;
+    border-radius: 20px;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.reviews-photo{
+    display: block;
+    width: 150px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    margin: auto;
+}
+
+.review-author-name{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.review-author-job-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.review-text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 12px;
+}
+
+.reviews-button{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 88px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.left{
+        left: 20px;
+    }
+
+    &.right{
+        right: 20px;
+    }
+}
+
+.reviews-button-icon{
+    width: 32px;
+}
+
+.about{
+    margin-top: 49px;
+    padding-top: 31px;
+    padding-bottom: 46px;
+    background-color: #BACFF2;
+}
+
+.about-title{
+    @extend .catalog-title;
+    text-align: center;
+}
+
+.about-description{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 14px;
+}
+
+.about-list{
+    margin-top: 44px;
+    padding-left: 20px;
+        padding-right: 20px;
+}
+
+.about-list-item{
+    &:not(:first-child){
+        margin-top: 34px;
+    }
+}
+
+.about-list-item-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+}
+
+.about-list-item-text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    margin-top: 7px;
+}
+
+.art-n-fact-logo{
+    margin-left: 20px;
+    width: 235px;
+    height: 34px;
+    object-fit: cover;
+}
+
+.logo-wrap{
+    width: 275px;
+    height: 140px;
+    // padding: 20px;
+    margin-top: 31px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    border: 2px solid #1A2B70;
+        border-radius: 20px;
+}
+
+.about-logo-list{
+    counter-reset: myCounter;
+
+}
+
+.about-logo-list li{
+    list-style: none;
+}
+
+
+.about-logo-list-item{
+    font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+            text-transform: uppercase;
 }
