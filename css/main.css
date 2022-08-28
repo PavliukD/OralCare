@@ -58,6 +58,13 @@ section {
   }
 }
 
+.is-hidden {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-delay: 0;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -145,11 +152,23 @@ section {
   }
 }
 
-.hero-banner {
+.hero-banner-list {
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -999;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0;
+}
+
+.hero-banner-list li {
+  position: absolute;
+}
+
+.hero-banner {
+  top: 0;
   height: 568px;
   -o-object-fit: fill;
      object-fit: fill;
@@ -353,10 +372,13 @@ section {
 
 .catalog {
   margin-top: 61px;
+  overflow: hidden;
+  width: 276px;
 }
 @media (min-width: 768px) {
   .catalog {
     margin-top: 155px;
+    width: 1920px;
   }
 }
 
@@ -382,27 +404,38 @@ section {
 
 .catalog-list {
   margin-top: 14px;
+  display: flex;
+  flex-shrink: 0;
+  width: 276px;
+  margin: auto;
+  margin-top: 11px;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0;
 }
 @media (min-width: 768px) {
   .catalog-list {
+    flex-direction: column;
     width: 1404px;
+    margin-top: 0;
     margin: auto;
   }
 }
 
 .catalog-list-item {
-  width: 100%;
+  width: 276px;
+  overflow: hidden;
+  flex-shrink: 0;
   background-color: #E6EFFF;
   border-radius: 20px;
   position: relative;
   padding-top: 247px;
   padding-bottom: 26px;
 }
-.catalog-list-item:not(:first-child) {
-  display: none;
-}
 @media (min-width: 768px) {
   .catalog-list-item {
+    position: relative;
+    width: 100%;
     background-color: transparent;
     height: 745px;
     padding: 0;
@@ -998,6 +1031,7 @@ section {
   margin: auto;
   padding-top: 15px;
   padding-bottom: 15px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .reviews-wrap {
@@ -1075,6 +1109,7 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 12px;
+  width: 235px;
 }
 @media (min-width: 768px) {
   .review-text {
@@ -1083,6 +1118,7 @@ section {
     line-height: 25px;
     margin-top: 24px;
     padding: 0;
+    width: 630px;
   }
 }
 
@@ -1093,6 +1129,7 @@ section {
   top: 88px;
   padding-left: 0;
   padding-right: 0;
+  z-index: 999;
 }
 @media (min-width: 768px) {
   .reviews-button {
@@ -1116,6 +1153,9 @@ section {
   }
 }
 
+.reviews li {
+  flex-shrink: 0;
+}
 @media (min-width: 768px) {
   .reviews li {
     display: flex;
@@ -1277,4 +1317,11 @@ section {
     font-size: 32px;
     line-height: 39px;
   }
+}
+
+.reviews-list {
+  display: flex;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-delay: 0;
 }/*# sourceMappingURL=main.css.map */
