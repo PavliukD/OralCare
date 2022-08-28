@@ -398,9 +398,56 @@ section {
   padding-top: 247px;
   padding-bottom: 26px;
 }
+.catalog-list-item:not(:first-child) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .catalog-list-item {
+    background-color: transparent;
+    height: 745px;
+    padding: 0;
+  }
+  .catalog-list-item:nth-child(odd) .catalog-product-image-wrap {
+    right: auto;
+    left: 0;
+  }
+  .catalog-list-item:nth-child(odd) .catalog-properties-wrap {
+    right: auto;
+    left: 23px;
+  }
+  .catalog-list-item:nth-child(odd) .catalog-list-item-description {
+    right: -140px;
+  }
+  .catalog-list-item:nth-child(even) .catalog-product-image-wrap {
+    left: auto;
+    right: 0;
+  }
+  .catalog-list-item:not(:first-child) {
+    display: block;
+    margin-top: 255px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-list-item-description {
+    position: absolute;
+    top: 113px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
 
 .catalog-list-item-title {
   padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-list-item-title {
+    padding: 0;
+    margin: 0;
+    font-size: 48px;
+    line-height: 70px;
+  }
 }
 
 .catalog-list-item-text, .complex-item-title {
@@ -414,10 +461,28 @@ section {
   margin-top: 10px;
   padding-left: 20px;
 }
+@media (min-width: 768px) {
+  .catalog-list-item-text, .complex-item-title {
+    padding: 0;
+    width: 465px;
+    font-size: 21px;
+    line-height: 25px;
+    margin: 0;
+    margin-top: 31px;
+  }
+}
 
 .catalog-list-item-text-main, .explanation-main-text, .catalog-product-properties {
   width: 235px;
   padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-list-item-text-main, .explanation-main-text, .catalog-product-properties {
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+    width: 468px;
+  }
 }
 
 .catalog-bg-image {
@@ -429,6 +494,14 @@ section {
   bottom: 0px;
   top: -40px;
 }
+@media (min-width: 768px) {
+  .catalog-bg-image {
+    width: 72%;
+    top: auto;
+    bottom: -60px;
+    left: 240px;
+  }
+}
 
 .catalog-product-image {
   height: 100%;
@@ -439,16 +512,31 @@ section {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 768px) {
+  .catalog-product-image {
+    height: 652px;
+    margin-top: 51px;
+  }
+}
 
 .catalog-product-image-wrap {
   display: flex;
   justify-content: center;
   width: 40%;
   height: 222px;
-  width: mix-content;
   position: absolute;
   top: 12px;
   left: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-product-image-wrap {
+    width: 1174px;
+    height: 745px;
+    background-color: #E6EFFF;
+    border-radius: 20px;
+    top: 0;
+    z-index: -1;
+  }
 }
 
 .catalog-product-properties {
@@ -458,11 +546,35 @@ section {
   text-align: center;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .catalog-product-properties {
+    width: 180px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 45px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-properties-wrap li .catalog-product-properties {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
 
 .catalog-properties-icon {
   width: 32px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .catalog-properties-icon {
+    width: 81px;
+    margin-top: 113px;
+    margin-bottom: 43px;
+  }
 }
 
 .catalog-properties-wrap {
@@ -474,9 +586,42 @@ section {
   right: 23px;
 }
 
+@media (min-width: 768px) {
+  .catalog-properties-wrap ul {
+    margin-top: 29px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-properties-wrap li:not(:first-child) {
+    margin-top: 29px;
+  }
+}
+
 .catalog-products-links {
-  margin-top: 48px;
+  margin-top: 24px;
   padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-products-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 35px;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+
+.catalog-products-links li:not(:first-child) {
+  margin-top: 14px;
+}
+@media (min-width: 768px) {
+  .catalog-products-links li:not(:first-child) {
+    margin-top: 0;
+    margin-left: 15px;
+  }
 }
 
 .catalog-product-link {
@@ -485,6 +630,15 @@ section {
   width: fit-content;
   padding-left: 22px;
   padding-right: 22px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .catalog-product-link {
+    margin: 0;
+    width: auto;
+    padding-left: 44px;
+    padding-right: 44px;
+  }
 }
 
 .complex {
