@@ -66,13 +66,6 @@ section {
   width: 320px;
   margin: auto;
 }
-@media (min-width: 1200px) {
-  section {
-    min-width: 1200px;
-    max-width: 1920px;
-  }
-}
-
 .is-hidden {
   opacity: 0;
   transition-property: opacity;
@@ -966,43 +959,56 @@ section {
 }
 
 .explanation {
+  width: 275px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
   margin-top: 61px;
-  position: relative;
   padding-top: 102px;
 }
 @media (min-width: 768px) {
   .explanation {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 0;
     margin-top: 98px;
+    width: 74%;
+    position: relative;
+  }
+}
+
+.expert-name-wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.explanation-expert-name {
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .explanation-expert-name {
     width: 100%;
   }
 }
 
-.explanation-expert-name {
-  position: absolute;
-  top: 0;
-  right: 21px;
-}
-@media (min-width: 768px) {
-  .explanation-expert-name {
-    position: static;
-    margin-left: 255px;
-  }
-}
-
 .explanation-name {
+  width: 100%;
   text-align: left;
   margin: 0;
-  width: 150px;
   padding: 0;
 }
 @media (min-width: 768px) {
   .explanation-name {
-    width: 469px;
-    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 1400px) {
+  .explanation-name {
     font-size: 48px;
-    line-height: 70px;
   }
 }
 
@@ -1010,43 +1016,50 @@ section {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 150px;
 }
 @media (min-width: 768px) {
   .explanation-job-title {
-    width: 469px;
+    display: block;
     font-weight: 700;
     font-size: 21px;
-    line-height: 25px;
   }
 }
 
 .explanation-dots {
-  position: absolute;
+  text-align: start;
   font-weight: 200;
   font-size: 200px;
-  line-height: 150px;
-  top: 0;
-  left: 0;
+  line-height: 1;
+  max-height: 120px;
+  margin-top: -27px;
+  margin-left: -27px;
 }
 @media (min-width: 768px) {
   .explanation-dots {
-    bottom: 0;
-    transform: translateY(50%);
-    top: auto;
-    left: 615px;
+    position: absolute;
+    bottom: -27px;
+    left: 25%;
   }
 }
 
 .explanation-main-text {
-  width: 275px;
+  padding: 0;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .explanation-main-text {
-    width: 938px;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 67%;
+  }
+}
+@media (min-width: 1400px) {
+  .explanation-main-text {
+    font-size: 21px;
   }
 }
 
@@ -1092,8 +1105,7 @@ section {
 @media (min-width: 768px) {
   .reviews-wrap {
     margin-top: 57px;
-    width: 80%;
-    max-width: 1408px;
+    width: 74%;
   }
 }
 
