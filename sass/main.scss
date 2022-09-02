@@ -261,46 +261,9 @@ section{
     }
 }
 
-.title-why{
-    margin-top: 119px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    width: 255px;
-    padding-left: 20px;
-        padding-right: 20px;
 
-        @media (min-width: 768px){
-            margin-top: 437px;
-            font-size: 59px;
-                line-height: 65px;
-                width: 469px;
-                padding-left: 255px;
-        }
-}
 
-.notification{
-    font-style: italic;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 0.03em;
-    margin-top: 28px;
-    width: 255px;
-    padding-left: 20px;
-        padding-right: 20px;
 
-    @media (min-width: 768px){
-        font-size: 21px;
-            line-height: 25px;
-            width: 468px;
-            margin-top: 106px;
-            margin-left: auto;
-    }
-}
 
 .hero-text-main-wrap{
     position: absolute;
@@ -320,13 +283,132 @@ section{
         padding-right: 20px;
         @media (min-width: 768px) {
             font-size: 21px;
-                line-height: 25px;
-                width: 938px;
+            line-height: 25px;
+            width: 938px;
         }
 }
 
-.hero-benefits-list{
+// Разделить секции
+
+.why{
+    width: 275px;
+    @media(min-width: 768px){
+        width: 74%;
+        max-width: 1408px;
+    }
+
+}
+
+.why-text-wrap{
+    @media (min-width: 768px){
+        display: flex;
+    }
+}
+
+.title-why{
+    margin-top: 119px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     width: 100%;
+
+        @media (min-width: 768px){
+            margin-top: 0;
+            padding: 0;
+            font-size: 28px;
+            line-height: 1.1;
+            width: 35%;
+        }
+
+        @media (min-width: 964px){
+            font-size: 36px;
+        }
+
+        @media (min-width: 1300px){
+
+            font-size: 48px;
+
+        }
+
+        @media (min-width: 1526px){
+            font-size: 59px;
+
+        }
+}
+
+// .why-text-main-wrap{
+//     position: absolute;
+//     top: 1258px;
+//     left: 727px;
+// }
+
+.why-main-wrap{
+    width: 275px;
+    @media (min-width: 768px){
+        width: 67%;
+    }
+}
+
+.why-text-main{
+    margin-top: 14px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+
+    @media (min-width: 768px) {
+        padding: 0;
+        margin-left: 10px;
+        font-size: 18px;
+        line-height: 1.2;
+        width:100%;
+
+        &:first-child{
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+    }
+
+    @media (min-width: 964px){
+        font-size: 21px;
+    }
+}
+
+.notification{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    margin-top: 28px;
+    width: 100%;
+
+    @media (min-width: 768px){
+        font-size: 18px;
+        line-height: 1.2;
+        padding: 0;
+        width: 60%;
+        margin-top: 50px;
+        margin-left: auto;
+    }
+
+    @media (min-width: 964px){
+        font-size: 21px;
+        line-height: 25px;
+        width: 468px;
+        margin-top: 106px;
+        margin-left: auto;
+    }
+}
+
+.why-benefits-list{
+   width: 275px;
+   margin: auto;
     background-color: #1A2B70;
     border-radius: 20px;
     padding-top: 28px;
@@ -334,11 +416,12 @@ section{
     margin-top: 28px;
 
     @media (min-width: 768px){
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 100%;
+        // padding-left: 10%;
+        // padding-right: 10%;
         display: flex;
-        flex-wrap: wrap;
-        width: 55%;
+        // flex-wrap: wrap;
+        width: 100%;
         min-height: 352px;
         margin: auto;
         margin-top: 106px;
@@ -361,11 +444,15 @@ section{
 
         @media (min-width: 857px){
             margin-top: 0;
-            // margin-left: 168px;
         }
     }
 
     &:first-child{
+
+       @media(min-width: 867px){
+        margin-left: 10%;
+       }
+
         & img{
             height: 89px;
 
@@ -385,14 +472,18 @@ section{
     }
 
     &:last-child{
-        @media (max-width: 1242px){
-            margin: auto;
-            margin-top: 20px;
-        }
-        @media (max-width: 857px){
-            margin-top: 58px;
-            // margin-left: 168px;
-        }
+        margin-right: 0;
+        @media(min-width: 857px){
+            margin-right: 10%;
+           }
+        // @media (max-width: 1242px){
+        //     margin: auto;
+        //     margin-top: 20px;
+        // }
+        // @media (max-width: 857px){
+        //     margin-top: 58px;
+        //     margin-left: 168px;
+        // }
     }
 }
 

@@ -252,49 +252,6 @@ section {
   }
 }
 
-.title-why {
-  margin-top: 119px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  width: 255px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-@media (min-width: 768px) {
-  .title-why {
-    margin-top: 437px;
-    font-size: 59px;
-    line-height: 65px;
-    width: 469px;
-    padding-left: 255px;
-  }
-}
-
-.notification {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.03em;
-  margin-top: 28px;
-  width: 255px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-@media (min-width: 768px) {
-  .notification {
-    font-size: 21px;
-    line-height: 25px;
-    width: 468px;
-    margin-top: 106px;
-    margin-left: auto;
-  }
-}
-
 .hero-text-main-wrap {
   position: absolute;
   top: 1258px;
@@ -320,8 +277,126 @@ section {
   }
 }
 
-.hero-benefits-list {
+.why {
+  width: 275px;
+}
+@media (min-width: 768px) {
+  .why {
+    width: 74%;
+    max-width: 1408px;
+  }
+}
+
+@media (min-width: 768px) {
+  .why-text-wrap {
+    display: flex;
+  }
+}
+
+.title-why {
+  margin-top: 119px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .title-why {
+    margin-top: 0;
+    padding: 0;
+    font-size: 28px;
+    line-height: 1.1;
+    width: 35%;
+  }
+}
+@media (min-width: 964px) {
+  .title-why {
+    font-size: 36px;
+  }
+}
+@media (min-width: 1300px) {
+  .title-why {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1526px) {
+  .title-why {
+    font-size: 59px;
+  }
+}
+
+.why-main-wrap {
+  width: 275px;
+}
+@media (min-width: 768px) {
+  .why-main-wrap {
+    width: 67%;
+  }
+}
+
+.why-text-main {
+  margin-top: 14px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+}
+@media (min-width: 768px) {
+  .why-text-main {
+    padding: 0;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 100%;
+  }
+  .why-text-main:first-child {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+}
+@media (min-width: 964px) {
+  .why-text-main {
+    font-size: 21px;
+  }
+}
+
+.notification {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  margin-top: 28px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .notification {
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 0;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: auto;
+  }
+}
+@media (min-width: 964px) {
+  .notification {
+    font-size: 21px;
+    line-height: 25px;
+    width: 468px;
+    margin-top: 106px;
+    margin-left: auto;
+  }
+}
+
+.why-benefits-list {
+  width: 275px;
+  margin: auto;
   background-color: #1A2B70;
   border-radius: 20px;
   padding-top: 28px;
@@ -329,12 +404,10 @@ section {
   margin-top: 28px;
 }
 @media (min-width: 768px) {
-  .hero-benefits-list {
-    padding-left: 10%;
-    padding-right: 10%;
+  .why-benefits-list {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    width: 55%;
+    width: 100%;
     min-height: 352px;
     margin: auto;
     margin-top: 106px;
@@ -343,7 +416,7 @@ section {
   }
 }
 @media (max-width: 857px) {
-  .hero-benefits-list {
+  .why-benefits-list {
     flex-direction: column;
   }
 }
@@ -358,6 +431,11 @@ section {
 @media (min-width: 857px) {
   .hero-benefits-item:not(:first-child) {
     margin-top: 0;
+  }
+}
+@media (min-width: 867px) {
+  .hero-benefits-item:first-child {
+    margin-left: 10%;
   }
 }
 .hero-benefits-item:first-child img {
@@ -378,15 +456,12 @@ section {
     height: 149px;
   }
 }
-@media (max-width: 1242px) {
-  .hero-benefits-item:last-child {
-    margin: auto;
-    margin-top: 20px;
-  }
+.hero-benefits-item:last-child {
+  margin-right: 0;
 }
-@media (max-width: 857px) {
+@media (min-width: 857px) {
   .hero-benefits-item:last-child {
-    margin-top: 58px;
+    margin-right: 10%;
   }
 }
 
