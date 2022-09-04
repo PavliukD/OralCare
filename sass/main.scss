@@ -58,12 +58,16 @@ ul{
     margin-block-end: 0;
 }
 
+ol {
+    padding-inline-start: 0;
+}
+
 a{
     text-decoration: none;
 }
 
 section{
-    width: 320px;
+    width: 100%;
     margin: auto;
 
     @media (min-width: 1200px){
@@ -83,6 +87,7 @@ section{
 .hero{
     display: block;
     position: relative;
+    width: 100%;
     // overflow: hidden;
     // overflow-y: visible;
     // background-image: url('../images/woman-baner.png');
@@ -102,7 +107,7 @@ section{
 }
 
 .hero-container{
-    width: 275px;
+    width: 86%;
     margin: auto;
     padding-top: 336px;
     padding-bottom: 48px;
@@ -307,7 +312,7 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-left: 20px;
+    // margin-left: 20px;
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-delay: 0;
@@ -358,7 +363,8 @@ section{
 // Разделить секции
 
 .why{
-    width: 275px;
+    width: 86%;
+    margin: auto;
     @media(min-width: 768px){
         margin-top: 210px;
         width: 74%;
@@ -414,7 +420,7 @@ section{
 // }
 
 .why-main-wrap{
-    width: 275px;
+    width: 100%;
     @media (min-width: 768px){
         width: 67%;
     }
@@ -475,7 +481,7 @@ section{
 }
 
 .why-benefits-list{
-   width: 275px;
+   width: 100%;
    margin: auto;
     background-color: #1A2B70;
     border-radius: 20px;
@@ -488,7 +494,7 @@ section{
         // padding-left: 10%;
         // padding-right: 10%;
         display: flex;
-        // flex-wrap: wrap;
+        // flex-wrap:flex-directioncatalog-list-item-description wrap;
         width: 100%;
         min-height: 352px;
         margin: auto;
@@ -544,14 +550,6 @@ section{
         @media(min-width: 857px){
             margin-right: 10%;
            }
-        // @media (max-width: 1242px){
-        //     margin: auto;
-        //     margin-top: 20px;
-        // }
-        // @media (max-width: 857px){
-        //     margin-top: 58px;
-        //     margin-left: 168px;
-        // }
     }
 }
 
@@ -577,7 +575,7 @@ section{
 .catalog{
     margin-top: 61px;
     overflow: hidden;
-    width: 276px;
+    width: 86%;
 
     @media (min-width: 768px){
         margin-top: 155px;
@@ -609,7 +607,7 @@ section{
     margin-top: 14px;
     display: flex;
     flex-shrink: 0;
-    width: 276px;
+    width: 100%;
     margin: auto;
     margin-top: 11px;
 
@@ -627,7 +625,7 @@ section{
 }
 
 .catalog-list-item{
-    width: 276px;
+    width: 100%;
     overflow: hidden;
     flex-shrink: 0;
     background-color: #E6EFFF;
@@ -637,7 +635,7 @@ section{
     padding-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
 
 
@@ -656,7 +654,6 @@ section{
 
 
         &:nth-child(odd){
-            // flex-direction: row-reverse;
             & .catalog-product-image-wrap{
                 right: auto;
                 left: 0;
@@ -672,6 +669,7 @@ section{
             }
         }
         &:nth-child(even) {
+            flex-direction: row-reverse;
             & .catalog-product-image-wrap{
                 right: 0;
                 left: auto;
@@ -693,7 +691,12 @@ section{
 }
 
 .catalog-list-item-description{
+    width: 86%;
+    margin: auto;
+    margin-top: 15px;
     @media (min-width: 768px){
+        margin-top: 0;
+        margin: 0;
         display: inline-block;
         // position: absolute;
         // top: 113px;
@@ -703,7 +706,7 @@ section{
 
 .catalog-list-item-title{
     @extend .catalog-title;
-    padding-left: 20px;
+    // padding-left: 20px;
 
     @media (min-width: 768px){
         padding: 0;
@@ -732,9 +735,9 @@ section{
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: 235px;
+    width: 100%;
     margin-top: 10px;
-    padding-left: 20px;
+    // padding-left: 20px;
 
     @media (min-width: 768px) {
         padding: 0;
@@ -761,8 +764,11 @@ section{
 
 .catalog-list-item-text-main{
     @extend .hero-text-main;
-    width: 235px;
-    padding-left: 20px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 0;
+    // padding-left: 20px;
 
     @media (min-width: 768px){
         padding: 0;
@@ -783,31 +789,15 @@ section{
     }
 }
 
-// .catalog-bg-image{
-//     position: absolute;
-//     transform: rotate(3deg);
-//     display: block;
-//     width: 220%;
-//     left: -50px;
-//     bottom: 0px;
-//     top: -40px;
-//         // transform: translateX(-50%);
-//     @media (min-width: 768px){
-//         width: 72%;
-//         top: auto;
-//         bottom: -60px;
-//         left: 240px;
-//     }
-// }
 
 .catalog-product-image{
     height: 100%;
     object-fit: cover;
-    margin-right: 15px;
+    // margin-right: 15px;
     z-index: 1;
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media (min-width: 768px){
         margin-top: 20px;
@@ -821,20 +811,35 @@ section{
 .catalog-product-image-wrap{
     display: flex;
     justify-content: center;
+    position: relative;
     width: 50%;
-    height: 222px;
-
+    height: auto;
     top: 12px;
     left: 20px;
     background-image: url('../images/splash-1.png');
     background-repeat: no-repeat;
     background-size: 180% 100%;
-    background-position: -50px, 100px, center;
+    background-position: -40px, 100px, center;
+
     overflow: visible;
 
+    @media (min-width: 400px){
+            background-size: 140% 100%;
+        background-position: -20px, 100px, center;
+    }
+
+    @media (min-width: 520px) {
+        background-size: 120% 100%;
+        background-position: -10px, 100px, center;
+    }
+
+    @media (max-width: 768px ){
+            max-height: 222px;
+    }
+
     @media (min-width: 768px){
-            position: absolute;
-        width: 84%;
+        position: absolute;
+        width: 83%;
         height: 100%;
         background-color: #E6EFFF;
         border-radius: 20px;
@@ -873,13 +878,6 @@ section{
         line-height: 45px;
     }
 
-    // @media (min-width: 768px) {
-    //         width: 180px;
-    //         font-weight: 700;
-    //         font-size: 31px;
-    //         line-height: 45px;
-    //         margin-top: 0;
-    //     }
 
 }
 
@@ -914,11 +912,8 @@ section{
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    // width: 180px;
-    // width: 180px;
-    // position: absolute;
-    // top: 12px;
-    // right: 23px;
+    margin-right: 5%;
+
 
 }
 
@@ -938,7 +933,7 @@ section{
 
 .catalog-products-links{
     margin-top: 24px;
-    padding-left: 20px;
+    // padding-left: 20px;
 
     @media (min-width: 768px){
         padding: 0;
@@ -1006,7 +1001,7 @@ section{
         margin: 0;
         width: auto;
         height: 56px;
-        font-size: 24;
+        font-size: 30px;
         padding-left: 22px;
         padding-right: 22px;
     }
@@ -1069,8 +1064,9 @@ section{
 
 .complex-list-item{
     margin: auto;
-    width: 280px;
-    height: 193px;
+    width: 87%;
+    max-width: 280px;
+    height: 70%;
     border: 2px solid #1A2B70;
     border-radius: 20px;
     position: relative;
@@ -1299,7 +1295,9 @@ section{
 }
 
 .complex-image{
-    width: 76px;
+    width: 28%;
+    max-width: 76px;
+    height: auto;
     max-height: 172px;
     margin-right: 19px;
 
@@ -1350,6 +1348,7 @@ section{
 .complex-item-title{
     @extend .catalog-list-item-text;
     padding: 0;
+
     margin-bottom: 7px;
 
     @media (min-width: 768px) {
@@ -1455,7 +1454,7 @@ section{
 }
 
 .explanation{
-    width: 275px;
+    width: 86%;
     height: fit-content;
     margin: auto;
     margin-top: 61px;
@@ -1556,6 +1555,7 @@ section{
 
 .reviews{
     margin-top: 44px;
+    width: 86%;
 
     @media (min-width: 768px){
         width: 100%;
@@ -1582,7 +1582,7 @@ section{
 
 .reviews-wrap{
     position: relative;
-    width: 275px;
+    width: 100%;
     background-color: #1A2B70;
     border-radius: 20px;
     margin: auto;
@@ -1629,10 +1629,12 @@ section{
     text-transform: uppercase;
     color: #FFFFFF;
     margin-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 86%;
+    margin: auto;
+    margin-top: 20px;
 
     @media (min-width: 768px){
+        margin: 0;
         font-size: 32px;
         line-height: 1.2;
         padding: 0;
@@ -1653,10 +1655,11 @@ section{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 86%;
+    margin: auto;
 
     @media (min-width: 768px){
+        margin: 0;
         font-weight: 700;
         font-size: 18px;
         line-height: 1.2;
@@ -1677,12 +1680,12 @@ section{
     line-height: 14px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 86%;
+    margin: auto;
     margin-top: 12px;
-    width: 235px;
 
     @media (min-width: 768px){
+        margin: 0;
         font-weight: 400;
         font-size: 18px;
         line-height: 1.2;
@@ -1733,6 +1736,7 @@ section{
 }
 
 .reviews li{
+    width: 100%;
     flex-shrink: 0;
     @media (min-width: 768px) {
         display: flex;
@@ -1774,8 +1778,10 @@ section{
 }
 
 .about-description{
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 86%;
+    margin: auto;
+    // padding-left: 20px;
+    // padding-right: 20px;
     margin-top: 14px;
 
     @media (min-width: 768px) {
@@ -1795,8 +1801,11 @@ section{
 
 .about-list{
     margin-top: 44px;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 86%;
+    margin: auto;
+    margin-top: 44px;
+    // padding-left: 20px;
+    // padding-right: 20px;
 
     @media (min-width: 768px){
         display: flex;
@@ -1870,12 +1879,14 @@ section{
 }
 
 .art-n-fact-logo{
-    margin-left: 20px;
-    width: 235px;
-    height: 34px;
+    // margin-left: 20px;
+    display: block;
+    width: 86%;
+    height: auto;
     object-fit: cover;
+    margin: auto;
 
-    @media (min-width: 900px){
+    @media (min-width: 768px){
         width: 50%;
         height: auto;
         max-height: 104px;
@@ -1884,13 +1895,15 @@ section{
 }
 
 .logo-wrap{
-    width: 275px;
-    height: 140px;
+    width: 86%;
+    height: auto;
+    // height: 140px;
     // padding: 20px;
     margin-top: 31px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
+    padding-bottom: 20px;
     border: 2px solid #1A2B70;
     border-radius: 20px;
 
@@ -1905,6 +1918,15 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.about-logo-list{
+    @media(max-width: 768px){
+        width: fit-content;
+        display: block;
+        margin: auto;
+        margin-top: 18px;
     }
 }
 
@@ -1939,6 +1961,7 @@ section{
 
 .reviews-list{
     display: flex;
+
     transition-property: transform;
     transition-duration: 500ms;
     transition-delay: 0;
