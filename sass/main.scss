@@ -255,9 +255,9 @@ section{
             right: 0;
 
             &.second{
-                width: 50%;
+                width: auto;
                 height: 100%;
-                object-fit: contain;
+                transform: translateX(45%);
 
             }
             // position: absolute;

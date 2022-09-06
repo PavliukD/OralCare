@@ -229,10 +229,9 @@ section {
     right: 0;
   }
   .hero-banner-list img.second {
-    width: 50%;
+    width: auto;
     height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    transform: translateX(45%);
   }
 }
 .hero-banner-list img.is-hidden {
