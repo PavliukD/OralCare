@@ -101,9 +101,18 @@
     const slides = document.querySelector('.hero-banner-list')
     const items = document.querySelectorAll('.hero-banner')
     const delay = Number(slides.dataset.timer)
-    console.log(items[0].classList)
+    const logo = document.querySelectorAll('.hero-logo-tested')
+    console.dir(slides.children)
+    const link = document.querySelector('.hero-link')
+    const title = document.querySelector('.hero-title')
+    const slogan = document.querySelector('.hero-slogan')
+    const text = document.querySelector('.hero-text')
 
     setInterval(() => {
+        link.classList.toggle('blue')
+        title.classList.toggle('white')
+        slogan.classList.toggle('white')
+        text.classList.toggle('white')
         for (let i = 0; i < items.length; i++){
             if (items[i].classList.contains('is-hidden')) {
                 items[i].classList.remove('is-hidden')
@@ -112,7 +121,31 @@
                     break
                 }
                 items[i + 1].classList.add('is-hidden')
-                console.log(items[i + 1])
+                
+                break
+            }
+        }
+
+        for (let i = 0; i < items.length; i++){
+            if (logo[i].classList.contains('is-hidden')) {
+                logo[i].classList.remove('is-hidden')
+                if (!logo[i + 1]) {
+                    logo[0].classList.add('is-hidden')
+                    break
+                }
+                logo[i + 1].classList.add('is-hidden')
+                break
+            }
+        }
+
+        for (let i = 0; i < items.length; i++){
+            if (slides.children[i].classList.contains('is-hidden')) {
+                slides.children[i].classList.remove('is-hidden')
+                if (!logo[i + 1]) {
+                    slides.children[0].classList.add('is-hidden')
+                    break
+                }
+                slides.children[i + 1].classList.add('is-hidden')
                 break
             }
         }

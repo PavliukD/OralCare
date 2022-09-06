@@ -84,7 +84,6 @@ section {
 @media (min-width: 768px) {
   .hero {
     width: 100%;
-    max-width: 1920px;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -114,12 +113,18 @@ section {
   line-height: 49px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  transition-property: color;
+  transition-duration: 1000ms;
+  transition-delay: 0;
 }
 @media (min-width: 768px) {
   .hero-title {
     font-size: 100px;
     line-height: 70px;
   }
+}
+.hero-title.white {
+  color: #FFFFFF;
 }
 
 .hero-slogan, .catalog-title, .about-title, .reviews-title, .complex-title, .explanation-name, .catalog-list-item-title {
@@ -130,6 +135,9 @@ section {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-top: 14px;
+  transition-property: color;
+  transition-duration: 1000ms;
+  transition-delay: 0;
 }
 @media (min-width: 768px) {
   .hero-slogan, .catalog-title, .about-title, .reviews-title, .complex-title, .explanation-name, .catalog-list-item-title {
@@ -139,9 +147,15 @@ section {
     margin-top: 29px;
   }
 }
+.hero-slogan.white, .white.catalog-title, .white.about-title, .white.reviews-title, .white.complex-title, .white.explanation-name, .white.catalog-list-item-title {
+  color: #FFFFFF;
+}
 
 .hero-text {
   display: none;
+  transition-property: color;
+  transition-duration: 1000ms;
+  transition-delay: 0;
 }
 @media (min-width: 768px) {
   .hero-text {
@@ -155,6 +169,9 @@ section {
     margin-top: 42px;
   }
 }
+.hero-text.white {
+  color: #FFFFFF;
+}
 
 .hero-logo-tested {
   position: absolute;
@@ -162,6 +179,9 @@ section {
   right: 22px;
   width: 101px;
   height: 101px;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-delay: 0;
 }
 @media (min-width: 768px) {
   .hero-logo-tested {
@@ -170,6 +190,9 @@ section {
     top: 24%;
     left: 50%;
   }
+}
+.hero-logo-tested.is-hidden {
+  opacity: 0;
 }
 
 .hero-banner-list {
@@ -190,7 +213,7 @@ section {
   }
 }
 .hero-banner-list img {
-  width: 400%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -201,7 +224,15 @@ section {
 }
 @media (min-width: 768px) {
   .hero-banner-list img {
-    width: 100%;
+    position: absolute;
+    width: 72%;
+    right: 0;
+  }
+  .hero-banner-list img.second {
+    width: 50%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 .hero-banner-list img.is-hidden {
@@ -212,20 +243,16 @@ section {
   width: 100%;
   height: 100%;
   position: absolute;
+  background: linear-gradient(0deg, #CDD6DB, #CDD6DB);
+  transition-property: opacity;
+  transition-duration: 1000ms;
+  transition-delay: 0;
 }
-
-.hero-banner {
-  top: 0;
-  -o-object-fit: fill;
-     object-fit: fill;
+.hero-banner-list li.blue {
+  background: linear-gradient(0deg, #127AD9, #127AD9);
 }
-@media (min-width: 768px) {
-  .hero-banner {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+.hero-banner-list li.is-hidden {
+  opacity: 0;
 }
 
 .hero-splash {
@@ -290,6 +317,20 @@ section {
     line-height: 70px;
   }
 }
+.hero-link.blue, .blue.catalog-product-link {
+  background-color: #FFFFFF;
+  color: #1A2B70;
+  border-color: #127AD9;
+  transition-property: background-color, color, border-color;
+  transition-duration: 250ms;
+  transition-delay: 0;
+  z-index: 2;
+}
+.hero-link.blue:hover, .blue.catalog-product-link:hover {
+  background-color: #1A2B70;
+  border-color: #1A2B70;
+  color: #FFFFFF;
+}
 
 .hero-text-main-wrap {
   position: absolute;
@@ -305,8 +346,6 @@ section {
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.03em;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 @media (min-width: 768px) {
   .hero-text-main, .catalog-list-item-text-main, .explanation-main-text, .catalog-product-properties {
@@ -374,6 +413,7 @@ section {
 @media (min-width: 768px) {
   .why-main-wrap {
     width: 67%;
+    margin-left: 20px;
   }
 }
 
